@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaStudy202210-changwoo" />
+        <module name="WebJavaStudy-202210-changwoo" />
       </profile>
     </annotationProcessing>
   </component>
