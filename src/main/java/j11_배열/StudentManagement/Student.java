@@ -1,5 +1,7 @@
 package j11_배열.StudentManagement;
 
+// 데이터: crud
+// 정보를 담는 그릇
 public class Student { // 학생의 정보를 담는 객체: Entity
 
     private String name;
@@ -10,13 +12,21 @@ public class Student { // 학생의 정보를 담는 객체: Entity
     private int avgScore;
     private char grade;
 
-    public Student(String name, int kor, int eng, int math) { // 생성자를 통한 주입. // 전역에 생성될 때 넣은 값 저장
+    public Student(String name, int kor, int eng, int math) { // 생성자를 통한 주입. // 전역 변수에 생성될 때 넣은 값 저장
         this.name = name;
         this.kor = kor;
         this.eng = eng;
         this.math = math;
 
         calculation(); // 호출
+    }
+
+    public void updateStudent(Student updateStudent) {
+        this.kor = updateStudent.kor;
+        this.eng = updateStudent.eng;
+        this.math = updateStudent.math;
+
+        calculation();
     }
 
     // 메소드를 세분화해서 나누는 것 중요!
@@ -58,6 +68,7 @@ public class Student { // 학생의 정보를 담는 객체: Entity
         System.out.println("평균: " + avgScore);
         System.out.println("학점: " + grade);
     }
-
-
+    public String getName() {
+        return name;
+    }
 }
