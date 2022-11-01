@@ -1,6 +1,6 @@
 package j13_추상화.추상클래스;
 
-public class TabletFactory extends Factory{
+public class TabletFactory extends Factory {
 
     public TabletFactory(String name) {
         super(name);
@@ -15,4 +15,6 @@ public class TabletFactory extends Factory{
     public void management() {
         System.out.println("태블릿 공장을 관리합니다.");
     }
+
+
 }
