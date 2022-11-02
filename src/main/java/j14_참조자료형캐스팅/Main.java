@@ -16,7 +16,19 @@ public class Main {
 
         // Power 객체는 없지만, Power로 여러개의 클래스들을 구현했기 때문에 얘네들이 하위이므로 업캐스팅되어져서
         // 캐스팅 자료형(Power) 생략하고, 매개변수로 들어가질 수 있음.
-        CentralControl centralControl = new CentralControl(led, speaker, computer3); // 업캐스팅(묵시적 형변환)
+
+//        CentralControl centralControl = new CentralControl(led, speaker, computer3); // 업캐스팅(묵시적 형변환)
+
+        CentralControl centralControl = new CentralControl(new Power[5]);
+
+        centralControl.addDevice(computer1);
+        centralControl.addDevice(speaker);
+        centralControl.addDevice(computer2);
+        centralControl.addDevice(led);
+        centralControl.addDevice(led);
+        centralControl.addDevice(led);
+        centralControl.addDevice(led);
+
 
         centralControl.powerOn();
         System.out.println("-----------------------");
