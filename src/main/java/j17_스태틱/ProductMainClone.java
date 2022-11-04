@@ -59,10 +59,14 @@ public class ProductMainClone {
 
         ProductMainClone productClone = new ProductMainClone();
 
-        ProductMainClone.main(new String[] {}); // => main 에서 main을 호출 할 수 있음: 재귀함수 : 실행 해보면 stackoverflow 발생
+//        ProductMainClone.main(new String[] {}); // => main 에서 main을 호출 할 수 있음: 재귀함수 : 실행 해보면 stackoverflow 발생
 
         productClone.setName("테스트");
         System.out.println(productClone.getName());
+
+        // 다른 패키지 메소드라도 스태틱으로 정의되어졌기 때문에, 호출을 할 수 있다.
+        Method1.main(new String[] {});
+        Method1.call1();
 
 
     }
